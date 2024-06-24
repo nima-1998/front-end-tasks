@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hammond Electrial</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gotham">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+         .containers{
+          max-width:1470px;
+          margin:0 auto;
+          padding:0;
+        }
+         @font-face {
+          font-family: "bignoodle";
+          src: url("bignoodle.ttf") format("truetype");
+        }
+        @font-face {
+          font-family: "bignoodle";
+          font-style: oblique;
+          src: url("big_noodle_titling_oblique.ttf") format("truetype");
+        }
+        html{
+          overflow: initial;
+          overflow-x: clip;
+        }
+        h2{
+          font-family: "bignoodle", sans-serif;
+          font-size: 53px;
+        }
+         header{
+          margin:0;
+          background-color: #002643;
+          font-family: "bignoodle", sans-serif;
+         }
+        header h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--title-color);
+        }
+        
+        li {
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+        }
+        .nav-item a{
+        padding: 9.1px;
+        text-decoration: none;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        }
+        .nav-logo {
+        padding: 20px;
+        margin-left: 30px;
+        
+        }
+        .nav-container {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        width:100%;
+        height:75px;
+        justify-content: space-between;
+        }
+        .nav-list {
+        display: flex;
+        margin-right:58px;
+        gap: 1.69rem;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        }
+        /*
+        .nav-list li:last-child {
+        margin-right: 10px;
+        }*/
+        .nav-list li a {
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        letter-spacing: 0cm;
+        }
+        .nav-btn {
+          width:134.6px;
+          height:30.9px;
+          margin-right:14.8px;
+          justify-content: center;
+          align-items: center;
+          border: 2px solid #C1283C;
+          background-color: var(--title-color);
+          color: #C1283C;
+          font-weight: 600;
+          cursor: pointer;
+        }
+        /* <!------------hero--------------!> */
+        
+        .herobanner-background img {
+          width: 100%;
+          height: 734px;
+          object-fit: cover;
+        }
+        .hero-section {
+          margin-left:95px;
+        }
+        .hero-caption h2{
+          color: #0049B6;
+          padding: 5px;
+          font-weight:normal;
+        }
+        .hero-caption p{
+          color: #103B5E;
+          padding: 5px;
+          padding-top:20px;
+          width:50%;
+          font-family: 'open Sans', sans-serif;
+          font-size: 16px;
+          font-weight: 600px;
+          line-height: 24px;
+                
+        }
+        .container-commer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .commercial-heading {
+            padding: 150px 100px;
+            flex: 0 0 40%;
+           
+        }
+       
+        .commercial-info {
+            flex: 0 0 60%;
+            font-size: 16px;
+            padding:10px;
+    
+        }
+        
+        .commercial-heading h2{
+          color: #0049B6;
+          font-family:"bignoodle", sans-serif;
+          font-size:53px;
+          font-weight:normal;
+          padding-bottom:28px;
+        }
+        .commercial-info p{
+          color: #002643;
+          font-family:"gotham", sans-serif;
+          font-weight: 300;
+          font-size: 16px;
+          line-height:32px;
+          margin-right:130px;
+         /* letter-spacing: 2px;*/
+        }
+        .comm-h1::after {
+          content: "";
+          display: block;
+          width: 128px;
+          height: 5px;
+          background-color: #C1283C;
+          margin-top: 1.8rem;
+        }
+        .logo-container{
+          background-color: #0049B6;
+        }
+        .logo {
+            display: flex; 
+            justify-content:center;
+            gap:180px;
+            align-items: center; 
+            padding:40px;
+        }
+        .logo1{
+          margin-left:55px;
+        }
+
+    
+    .logo h2,
+    .logo h5 {
+        margin: 0; 
+        color: #fff;
+        font-family: "bignoodle",sans-serif; 
+    }
+    .logo h2{
+      font-size: 68px;
+      font-weight: normal;
+    }
+    .logo h5{
+      font-size: 21px;
+      font-weight: normal;
+    }
+    .logo1-container{
+      display: flex;
+      flex-direction: row;
+      gap:30px;
+      align-items: center;
+      padding-bottom: 10px;
+    }
+    .text{
+      column-gap: 10px;
+    }
+
+    
+    .container-design{
+        display: flex;
+        
+    }
+   
+    .design-list {
+            list-style: none; 
+            padding-top:45px;
+        }
+        
+        .design li {
+            position: relative; /* Set position to relative */
+            padding-left: 40px;
+       }
+       .checkbox-ul li+li{
+            margin-top: 30px;
+        }
+        
+        .design-text li::before {
+            content: "";
+            position: absolute; 
+            left: 0; 
+            top: 20%;
+            transform: translateY(-50%); 
+            width: 20px; 
+            height: 20px; 
+            background-image: url('Group 10742.png'); 
+            background-size: contain; 
+            background-repeat: no-repeat;  
+        }
+      .design-image{
+        margin: 50px 100px;
+        padding-top: 78px;
+      }
+      .design-text{
+        margin-top:160px;
+        width:356px;
+
+      }
+      .design-text h2{
+        color: #0049B6;
+        font-family: "bignoodle", sans-serif;
+        font-size:53px;
+        font-weight: normal;
+      }
+      .design-text li{
+        color: #103B5E;
+        font-family: "open sans", sans-serif;
+        font-weight: normal;
+        line-height: 26px;
+        font-size: 16px;
+      }
+      .design-text2 h2, .design-text3 h2{
+        color: #0049B6;
+        font-family: "bignoodle", sans-serif;
+        font-size:53px;
+        font-weight: normal;
+      }
+
+      .design-text2 li, .design-text3 li{
+        color: #103B5E;
+        font-family: "open sans", sans-serif;
+        font-weight: normal;
+        line-height: 26px;
+        font-size: 16px;
+      }
+      .design-text2{
+        margin:50px 100px;
+      }
+      .design-text3{
+        margin: 64px 0px;
+        padding-left: 30px;
+      }
+      .design-text2 li::before, .design-text3 li::before {
+            content: "";
+            position: absolute; 
+            left: 0; 
+            /*top: 60%;
+            transform: translateY(-50%); */
+            width: 20px; 
+            height: 20px; 
+            background-image: url('Group 10742.png'); 
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            margin-right: 10px; 
+        }
+
+    .design h2::after{
+      content: "";
+            display: block;
+            width: 129px;
+            height: 5px;
+            background-color: #C1283C;
+            margin-top: 34px;
+    }
+  .container-hammonds{
+        display: flex;
+        margin-top: 65px;
+        margin-left:125px;
+    }
+    .hammonds-list {
+            list-style: none; 
+        }
+        
+  .hammonds-title{
+    margin: 20px;
+    margin-left:25px;
+    width:430px;
+  }
+  .hammonds h2, h3{
+    color: #0049B6;
+    font-family: "bignoodle", sans-serif;
+    font-weight: normal;
+  }
+  .hammonds h2{
+    font-size: 53px;
+  }
+  .hammonds h3{
+    font-size:33.74px;
+    margin-top:30px;
+  }
+  .hammonds h6{
+    color: #002643;
+    font-family: "gotham", sans-serif;
+    line-height: 32px;
+    font-size:16px;
+    font-weight: normal;
+  }
+  .hammonds h2::after{
+    content: "";
+    display: block;
+    width: 129px;
+    height: 5px;
+    background-color: #C1283C;
+    margin-top:28px;
+  }
+  .hammonds ul{
+            list-style: none;
+        }
+        .hammonds li{
+            position: relative;
+            min-height: 20px;
+            padding-left: 35px;
+            margin-bottom: 38px;
+        }
+        .hammonds li+li{
+            margin-top: 20px;
+        }
+        .hammonds li::before{
+            content: "";
+            background: transparent url('Group 10628.png') no-repeat scroll 0 0 / cover;
+            display: block;
+            height: 25px;
+            width: 25px;
+            margin-right: 15px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            
+        }
+        .hammonds-list{
+          padding-top: 20px;
+        }
+        .hammonds-btn {
+          width:189px;
+          height: 38px;
+          margin-top: 3px;  
+          justify-content: center;
+          align-items: center;
+          background-color: #fff;
+          border: 2px solid #C1283C;
+          color: #C1283C;
+          cursor: pointer;
+          font-family: "bignoodle", sans-serif;
+          font-size:24px;
+          font-weight: normal;
+        }
+        .hammonds-image{
+          min-height: 500px;
+        }
+        .hammonds-image img{
+          width:100%;
+          height:auto;
+          overflow:hidden;
+          object-fit: cover;
+          
+        }
+        .client-container{
+          position:relative;
+        }
+        .client{
+          object-fit:cover;
+
+        }
+
+        
+        .project-header{
+          text-align: center;
+          margin-bottom: 20px;
+          margin-top:102px;
+        }
+        .project-header h2{
+          color: #0049B6;
+          margin-bottom: 15px;
+          font-weight: normal;
+        }
+        .project-header h5{
+          color:#103B5E;
+          font-family:"open sans", sans-serif;
+        }
+        .project-com h4 {
+          color: #103B5E;
+          margin: 0;
+          font-family: "bignoodle", sans-serif;
+          font-size:16px;
+          font-weight:normal;
+          line-height: 26px;
+        }
+        .project-dis h5{
+          color: #4E4E4E;
+          font-family: "bignoodle",sans-serif;
+          font-size:18px;
+          margin-bottom: 10px;
+        }
+        .project-dis h3{
+          color:#103B5E;
+          font-family: "bignoodle",sans-serif;
+          font-size:34px;
+          font-weight: normal;
+
+        }
+        .project-done{
+          display:flex;
+          justify-content: space-between;
+          padding: 60px;
+        }
+        
+        .project-image{
+          width: 100%; 
+          object-fit: cover; 
+        }
+        
+        div.project-com{
+          background-color:#F4CB4B ;
+          width:101px;
+          height:26px;
+          margin-top:10px;
+          margin-bottom:10px;
+          text-align: center;
+        }
+        .project-btn{
+          padding: 10px 20px 10px 20px;
+          margin-left:0px;
+          margin-top: 20px;  
+          justify-content: center;
+          align-items: center;
+          background-color: #fff;
+          border: 2px solid #103B5E;
+          color: #103B5E;
+          cursor: pointer;
+          font-family: "bignoodle", sans-serif;
+          font-size: 24px;
+          font-weight: normal;
+
+        }
+        .project-btn img{
+          width:auto;
+          height:auto;
+          margin-left: 10px;
+
+        }
+        .view-btn{
+          width:189px;
+          padding: 10px 20px 10px 20px;
+          margin-top: 40px; 
+          margin-bottom: 40px; 
+          background-color: #fff;
+          border: 2px solid #C1283C;
+          color: #C1283C;
+          cursor: pointer;
+          font-family: "bignoodle", sans-serif;
+          font-size: 24px;
+          font-weight: normal;
+
+        }
+        .project-view {
+          display: flex;
+          justify-content: center; /* Horizontally center the content */
+        }
+        .needs{
+          background-color: #F3F3F3;
+        }
+        .container-needs{
+          display: flex;
+          width:100%;
+          flex-direction: column;
+          padding: 177px 0px 100px;
+          align-items: center;
+          
+        }
+        .needs h2 {
+          position: relative;
+          color: #0049B6;
+          font-family: "bignoodle", sans-serif;
+          font-size: 53px;
+          font-weight: normal;
+        }
+
+        .needs h2::after {
+          content: "";
+          position: absolute;
+          left: 50%; /* Position the pseudo-element in the center of the h2 */
+          transform: translateX(-50%); /* Move the pseudo-element back by half of its width */
+          width: 130px;
+          height: 5px;
+          background-color: #C1283C;
+          margin-top: 90px;
+        }
+        .needs h3{
+          margin-bottom: 10px;
+          margin-top: 86px ;
+          margin-left:50px;
+          color: #0049B6;
+          font-family: "bignoodle", sans-serif;
+          font-weight: normal;
+          text-align: center;
+          font-size:34px;
+        }
+        .needs h5{
+          text-align: center;
+          margin-bottom: 35px;
+          color: #002643;
+          font-family: "open sans", sans-serif;
+          font-size:16px;
+          line-height: 26px;
+          font-weight:normal;
+        }
+        .needs-btn{
+          width:189px;
+          height:37.1px;
+          margin-left:0px;
+          margin-top: 20px;  
+          background-color: #fff;
+          border: 2px solid #C1283C;
+          color: #C1283C;
+          cursor: pointer;
+          font-family: "bignoodle", sans-serif;
+          font-size:24px;
+          line-height: 26px;
+          font-weight:normal;
+        }
+        .footer{
+          background-color: #002643;
+        }
+        .container-footer{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          padding:30px;
+        }
+        .footer h3{
+          color: #0082C5;
+          margin-bottom: 10px;
+          font-weight: normal;
+          font-family:"bignoodle", sans-serif;
+          font-size: 40px;
+        }
+        .footer h5{
+          color: #ffff;
+          font-weight:normal;
+          line-height: 32px;
+          font-family:"gotham", sans-serif;
+          
+        }
+        .footer img{
+          margin-bottom: 20px;
+          margin-top:10px;
+        }
+     
+     </style>
+
+  </head>
+  <body>
+    <header class="header">
+      <div class="containers">
+      <nav class="nav-container">
+        <label>
+          <img src="C:\Users\pakhr\Downloads\Group.png" class="nav-logo" />
+        </label>
+        <div class="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href=""></a>
+            </li>
+            <li class="nav-item">
+              <a href="">WHO WE ARE</a>
+            </li>
+            <li class="nav-item">
+              <a href="">OUR SERVICES </a>
+            </li>
+            <li class="nav-item">
+              <a href="">OUR WORK</a>
+            </li>
+            <li class="nav-item">
+              <a href="">CARRERS</a>
+            </li>
+            <li class="nav-item">
+             <button class="nav-btn">CONTACT US</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      </div>
+    </header>
+    <section style="position:relative;  min-height: 732px; display: flex; align-items: center;">
+      <figure class="herobanner-background">
+        <img src="C:\Users\pakhr\Downloads\hero.png" alt="" style="position: absolute; inset: 0; z-index: -1;" />
+      </figure>
+      <div class="containers">
+        <div class="hero-section">
+          <div class="hero-details">
+            <div class="hero-caption">
+              <h2>OUR SERVICES</h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="commercial-sec">
+      <div class="containers">
+      <div class="container-commer">
+        <div class="commercial-heading">
+          <h2 class="comm-h1">COMMERCIAL</h2>
+        </div>
+        <div class="commercial-info">
+          <p>
+            Starting out as a small family business Hammond Electrical has grown to a company now employing a team of skilled professionals. In 1987 Ken Hammond took over the family business and, through his leadership and experience, we have developed many strong and lasting relationships with our customers.
+          </p>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section class="logo-container">
+      <div class="containers">
+        <div class="logo">
+          <div class="logo1-container">
+            <div class="logo1">
+                <img src="C:\Users\pakhr\Downloads\l2.png">
+            </div>    
+            <div class="text">
+                    <h2>1920</h2>
+                    <h5>FIRST PROJECT BUILT</h5>
+            </div>
+          </div>
+          <div class="logo1-container">
+            <div class="logo2">
+                <img src="C:\Users\pakhr\Downloads\l1.png">
+            </div>    
+            <div class="text">
+                <h2>520</h2>
+                <h5>AMOUNT OF WORK COMPLETED</h5>
+            </div>
+          </div>
+            <div class="logo1-container">        
+            <div class="logo3">
+                <img src="C:\Users\pakhr\Downloads\l3.png">
+            </div>
+            <div class="text">
+                <h2 style="font-size:34px;">LINK TO CAPABILITY<br> STATEMENT</h2>  
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </section> 
+
+    <section class="design">
+      <div class="containers">
+        <div class="container-design">
+          <figure class="design-image">
+              <img src="C:\Users\pakhr\Downloads\Group 10752.png">
+          </figure>
+          <div class="design-text">
+              <h2>DESIGN & ENGINEERING</h2>
+              <ul class="design-list">
+                  <li>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has typesetting.
+                  </li><br>
+                  <li>
+                    There are many  simply dummy text of the printing and typesetting industry.
+                  </li><br>
+                  <li>
+                    It is fihr  Ipsum is simply dummy text.
+                  </li>
+              </ul>    
+          </div>
+        </div>
+      </div>  
+    </section>
+
+    <section class="design">
+      <div class="containers">
+        <div class="container-design">
+          <div class="design-text2">
+              <h2>WORKS</h2>
+              <ul class="design-list">
+                  <li>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has typesetting
+                  </li><br>
+                  <li>
+                    There are many  simply dummy text of the printing and typesetting industry.
+                  </li><br>
+                  <li>
+                    It is fihr  Ipsum is simply dummy text
+                  </li>
+              </ul>    
+          </div>
+          <div class="design-image">
+            <img src="C:\Users\pakhr\Downloads\Group (1).png">
+          </div>  
+        </div>
+    </div>
+  </section>
+
+  <section class="design">
+    <div class="containers">
+      <div class="container-design">
+        <div class="design-image">
+            <img src="C:\Users\pakhr\Downloads\Group 10754.png">
+        </div>
+        <div class="design-text3">
+            <h2>MAINTENANCE & REPAIRS</h2>
+            <ul class="design-list">
+              <li>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has typesetting
+              </li><br>
+              <li>
+                There are many  simply dummy text of the printing and typesetting industry.
+              </li><br>
+              <li>
+                It is fihr  Ipsum is simply dummy text
+              </li>
+            </ul>    
+        </div>
+        </div>
+    </div>
+</section>
+
+<section class="hammonds">
+  <div class="containers">
+    <div class="container-hammonds">
+      <div class="hammonds-title">
+          <h2>WHY CHOOSE HAMMONDS</h2>
+          <ul class="hammonds-list">
+              <li>
+                  <h3>WE MAKE THINGS EASY</h3>
+                  <h6>We’re about building long-term relationships built on honest communication.</h6>
+              </li>
+              <li>
+                  <h3>WE QUOTE YOUR JOB PROPERLY</h3>
+                  <h6>That means no nasty surprises or variations halfway through your project.</h6>
+              </li>
+              <li>
+                  <h3>A WELL THOUGHT OUT <br>METHODOLOGY</h3>
+                  <h6>We work closely with you to make sure everything is taken care of before we begin.</h6>
+              </li>
+          </ul>
+          <button class="hammonds-btn">GET IN TOUCH</button>    
+      </div>
+      <div class="hammonds-image">
+        <img src="C:\Users\pakhr\Downloads\Mask Group.png">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="client-container" style="min-height:810px;" >
+  <div class="client">
+  <img src="C:\Users\pakhr\Downloads\Hammond Electrical_website_v2 Content Update-05 1.png" style="width:100%; height:100%" >
+  </div>
+</section> 
+
+<section class="project">
+  <div class="containers">
+    <div class="project-container">
+      <div class="project-header">
+        <h2>THE PROJECTS WE HAVE DONE</h2>
+        <h5>Starting out as a small family business Hammond Electrical has grown to a<br> company now employing</h5>
+      </div>
+      <div class="project-done">
+        <div class="project-container">
+          <div class="project-image">
+            <img src="C:\Users\pakhr\Downloads\Rectangle 2292.png">
+          </div>
+          <div class="project-dis">
+            <div class="project-com">
+              <h4>COMMERCIAL</h4>
+            </div> 
+            <h5>YOBA CITY, USA</h5>
+            <h3>PRINCE CHARLES HOSPITAL</h3>
+            <button class="project-btn">VIEW PROJECT<img src="C:\Users\pakhr\Downloads\Arrow - Right.png"></button> 
+          </div>
+        </div>
+
+        <div class="project-container">
+          <figure class="project-image">
+            <img src="C:\Users\pakhr\Downloads\Rectangle 2292 (1).png">
+          </figure>
+            <div class="project-dis">
+              <div class="project-com">
+                <h4>COMMERCIAL</h4>
+              </div> 
+              <h5>YOBA CITY, USA</h5>
+              <h3>PRINCE CHARLES HOSPITAL</h3>
+              <button class="project-btn">VIEW PROJECT<img src="C:\Users\pakhr\Downloads\Arrow - Right.png"></button> 
+        </div>
+      </div>
+
+      <div class="project-container">
+        <figure class="project-image">
+          <img src="C:\Users\pakhr\Downloads\Rectangle 2292 (2).png" >
+        </figure>
+        <div class="project-dis">
+          <div class="project-com">
+            <h4>COMMERCIAL</h4>
+          </div>  
+          <h5>YOBA CITY, USA</h5>
+          <h3>PRINCE CHARLES HOSPITAL</h3>
+          <button class="project-btn">VIEW PROJECT<img src="C:\Users\pakhr\Downloads\Arrow - Right.png"></button> 
+        </div>
+      </div>
+    </div>  
+  
+    <div class="project-view">
+      <button class="view-btn">SEE ALL PROJECT</button>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="needs">
+  <div class="containers">
+    <div class="container-needs">
+      <h2>TALK TO US ABOUT YOUR ELECTRICAL NEEDS</h2>
+      <h3>Perth, we’ve got you covered.</h3>
+      <h5>Our expert team are available right now to answer your questions and talk you<br> through your electrical requirements. So give us a call today to start your project<br> out on the right foot, and partner with WA’s electrical experts.</h5>
+      <button class="needs-btn">GET IN TOUCH</button>
+    </div>
+  </div>  
+</section>
+
+<section  class="footer">
+  <div class="containers">
+    <div class="container-footer">
+      <div class="we">
+        <h3>WHO WE ARE</h3>
+        <h5>Our Story</h5>
+        <h5>Our Team</h5>
+        <h5>Our Accreditations</h5>
+      </div>
+      <div class="our-service">
+        <h3>OUR SERVIES</h3>
+        <h5>Commercial</h5>
+        <h5>Modular Buildings</h5>
+        <h5>Strata and Realestate</h5>
+        <h5>Retirement Village</h5>
+        <h5>Temporary Power</h5>
+      </div>
+      <div>
+        <h3>OUR WORK</h3>
+      </div>
+      <div>
+        <h3>CONTACT US</h3>
+      </div>
+      <div>
+        <img src="C:\Users\pakhr\Downloads\Group.png">
+        <h5>Unit 2 / 203 Star St. </h5>
+        <h5>Welshpool WA, 6106</h5>
+        <h5>(08) 9353 4660</h5>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </body>
+</html>
